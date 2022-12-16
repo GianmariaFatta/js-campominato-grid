@@ -36,29 +36,32 @@ const createCell =(content) => {
 }
    
     
-let j=0
+
 //generiamo azione al click del bottone
 
 buttonElement.addEventListener("click", function(){
-    
+   
     
     for(let i=1; i<=totalCells;i++){
         titleElement.classList.add("d-none");
       const cell=  createCell(i) ;
-      
+    //  
+
       
       cell.addEventListener("click",function() {
-        cell.classList.toggle("checked");
-        console.log(i)
-        
-    })
+          cell.classList.toggle("checked");
+          console.log(i)
+          
+        })
+       
     }
     
-    })
+    }, {once : true});
 
 
     
     
     
 
+    
     
